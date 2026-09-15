@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 volumes, energies = [], []
-for a in np.linspace(3.4, 3.9, 15):
+for a in np.linspace(1.4, 7.4, 180):
     atoms = bulk("Cu", "fcc", a=a, cubic=True)
     atoms.calc = EMT()
     volumes.append(atoms.get_volume() / len(atoms))
