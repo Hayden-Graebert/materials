@@ -69,7 +69,7 @@ e_fit = results["c2"] * v_fit**2 + results["c1"] * v_fit + results["c0"]
 label_text = "bulk modulus = {:.2f} GPa".format(results["b_gpa"])
 plt.plot(v_fine, e_fine, "o", label="MACE Data")
 plt.plot(v_fit, e_fit, "--", label="Parabolic Fit")
-plt.axvline(results["v0"], color="red", linestyle=":", label=f"V0 = {results['v0']:.2f} Å³")
+plt.plot([], [], " ", label=f"Equilibrium Volume = {results['v0']:.2f} Å³")
 plt.plot([], [], " ", label=label_text)
 plt.xlabel("Volume per atom (Å³)")
 plt.ylabel("Energy per atom (eV)")
